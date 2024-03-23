@@ -1,7 +1,7 @@
 const vscode = require('vscode');
 
 function activate(context) {
-    const provider = vscode.languages.registerCompletionItemProvider('javascript', {
+    const provider = vscode.languages.registerCompletionItemProvider(['javascript', 'javascriptreact', 'typescript', 'typescriptreact'], {
         provideCompletionItems(document, position) {
             // İmlecin bulunduğu satırı al
             const linePrefix = document.lineAt(position).text.substr(0, position.character);
