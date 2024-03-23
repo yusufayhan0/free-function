@@ -1,0 +1,50 @@
+{
+  "name": "free-function",
+  "displayName": "Free Function",
+  "description": "",
+  "version": "0.0.1",
+  "publisher": "Free Function",
+  "engines": {
+    "vscode": "^1.87.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:javascript",
+    "onLanguage:javascriptreact",
+    "onLanguage:typescript",
+    "onLanguage:typescriptreact",
+    "workspaceContains:**/node_modules/react/index.js",
+    "workspaceContains:**/node_modules/react-dom/index.js"
+  ],
+  "main": "./src/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.createFunction",
+        "title": "Create Function"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "yarn run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@types/vscode": "^1.87.0",
+    "@vscode/test-cli": "^0.0.6",
+    "@vscode/test-electron": "^2.3.9",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@babel/generator": "^7.24.1",
+    "@babel/parser": "^7.24.1",
+    "@babel/traverse": "^7.24.1",
+    "@babel/types": "^7.24.0"
+  }
+}
