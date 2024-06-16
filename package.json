@@ -49,7 +49,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:yusufayhan0/free-function.git"
+    "url": "https://github.com/yusufayhan0/free-function.git"
   },
-  "icon": "./src/assets/images/logo/logo.png"
+  "icon": "src/assets/images/logo/logo.png"
 }

@@ -14,7 +14,7 @@ The main features of it extension:
 
  ## How to use
 
- ![How to use](https://raw.githubusercontent.com/yusufayhan0/free-function/main/src/assets/images/how-to-use.gif)
+ ![How to use](https://raw.githubusercontent.com/yusufayhan0/free-function/main/src/assets/images/how-to-use.gif?token=GHSAT0AAAAAACSSPCEDNIZL7ZMMY5LCLRA6ZTPHWNA)
 
 ## Installation
 
