@@ -2,7 +2,7 @@
   "name": "free-function",
   "displayName": "Free Function",
   "description": "",
-  "version": "0.0.4",
+  "version": "0.0.1",
   "publisher": "free-function",
   "engines": {
     "vscode": "^1.87.0"
@@ -50,5 +50,6 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:yusufayhan0/free-function.git"
-  }
+  },
+  "icon": "./src/assets/images/logo/logo.png"
 }

@@ -7,7 +7,8 @@ function activate(context) {
             const linePrefix = document.lineAt(position).text.substr(0, position.character);
             
             // Regex ile fonksiyon çağrısı pattern'ini kontrol et
-            const functionCallPattern = /\b(\w+)\(([^)]*)\)\s$/;
+            // const functionCallPattern = /\b(\w+)\(([^)]*)\)\s$/;
+            const functionCallPattern = /\b(\w+)\s*\(\s*([\s\S]*?)\s*\)/;
             const match = linePrefix.match(functionCallPattern);
             
             if (!match) {
@@ -28,6 +29,7 @@ function activate(context) {
 
     // Komutu kaydet
     const command = vscode.commands.registerCommand('extension.createFunction', (funcName, paramsText) => {
+        
         const editor = vscode.window.activeTextEditor;
         if (!editor) {
             return;
@@ -49,10 +51,11 @@ function activate(context) {
         let line = position.line;
 
         // İmleçten yukarı doğru giderek en yakın component tanımını bul
+        const componentPattern = /(?:const|let|var|function)\s+\w+\s*=\s*\(|\bfunction\b\s+\w+\s*\(|(?:const|let|var)\s+\w+\s*:\s*React\.FC\s*<.*>\s*=\s*\(/gm;
         let componentStart = -1;
         for (; line >= 0; line--) {
             const lineText = document.lineAt(line).text;
-            if (lineText.match(/function\s+\w+\s*\([^)]*\)\s*{/)) {
+            if (lineText.match(componentPattern)) {
                 componentStart = line;
                 break;
             }
