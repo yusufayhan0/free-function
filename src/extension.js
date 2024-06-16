@@ -21,9 +21,13 @@ function activate(context) {
 
             // Kullanıcı bu öneriyi seçtiğinde, komutu tetikle
             completionItem.command = { command: 'extension.createFunction', title: 'Create Function', arguments: [...match] };
+
+            completionItem.sortText = '0000';
+            completionItem.preselect = true;
+
             return [completionItem];
         },
-    }, ' '); // Boşluk karakteri üzerinde tetiklenir
+    });
 
     context.subscriptions.push(provider);
 
