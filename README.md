@@ -14,7 +14,7 @@ The main features of it extension:
 
  ## How to use
 
- ![How to use](src/assets/images/how-to-use.gif)
+ ![How to use](https://i.ibb.co/gwSzZ61/how-to-use.gif)
 
 ## Installation
 
